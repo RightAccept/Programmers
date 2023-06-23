@@ -12,9 +12,6 @@ class Solution {
 				answer += i % 2 == 0 ? code.charAt(i) : "";
 			}
 		}
-		if (answer.equals("")) {
-			answer = "EMPTY";
-		}
-		return answer;
+		return answer.equals("") ? "EMPTY" : answer; 
 	}
 }
