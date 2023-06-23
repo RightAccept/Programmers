@@ -6,11 +6,11 @@ class Solution {
 		for (int i = 0; i < num_list.length; i++) {
 			int num = num_list[i];
 			if (i == num_list.length - 1) {
-				answer[i+1] = num > tmp ? num - tmp : num * 2;
+				answer[i + 1] = num > tmp ? num - tmp : num * 2;
 			}
 			answer[i] = num;
 			tmp = num;
 		}
-        return answer;
-    }
+		return answer;
+	}
 }
