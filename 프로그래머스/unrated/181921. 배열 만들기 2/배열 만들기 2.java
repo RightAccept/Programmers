@@ -22,7 +22,7 @@ class Solution {
 			count = 0;
 		}
 		
-		if (list.size() == 0) {
+		if (list.isEmpty()) {
 			list.add(-1);
 		}
 		
