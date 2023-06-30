@@ -1,12 +1,12 @@
 -- 코드를 입력하세요
-SELECT T2.TITLE AS TITLE,
-        T1. BOARD_ID AS BOARD_ID,
-        T1.REPLY_ID AS REPLY_ID, 
-        T1.WRITER_ID AS WRITER_ID,
-        T1. CONTENTS AS CONTENTS,
-        TO_CHAR(T1.CREATED_DATE, 'YYYY-MM-DD') AS CREATED_DATE
-    FROM USED_GOODS_REPLY T1 
-        JOIN USED_GOODS_BOARD T2 ON T1.BOARD_ID = T2.BOARD_ID
-        WHERE T2.CREATED_DATE >= TO_DATE('2022-10-01', 'YYYY-MM-DD')
-            AND T2.CREATED_DATE <= TO_DATE('2022-10-31', 'YYYY-MM-DD')
-                ORDER BY T1.CREATED_DATE, T2.TITLE;
+select a.title as title,
+        b.board_id as board_id,
+        b.reply_id as reply_id,
+        b.writer_id as writer_id,
+        b.contents as contents,
+        to_char(b.created_date, 'yyyy-mm-dd') as created_date
+    from used_goods_board a 
+            join used_goods_reply b on a.board_id = b.board_id
+        where a.created_date >= to_date('2022-10-01', 'yyyy-mm-dd')
+            and a.created_date <= to_date('2022-10-31', 'yyyy-mm-dd')
+                order by b.created_date, a.title;
