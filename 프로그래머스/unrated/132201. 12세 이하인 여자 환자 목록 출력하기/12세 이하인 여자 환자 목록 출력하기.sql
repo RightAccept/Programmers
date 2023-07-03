@@ -1,0 +1,5 @@
+-- 코드를 입력하세요
+SELECT pt_name, pt_no, gend_cd, age, NVL(tlno, 'NONE') AS TLNO
+    FROM patient
+    WHERE age <= 12 AND gend_cd = 'W'
+    ORDER BY age desc, pt_name;
